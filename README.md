@@ -2,7 +2,7 @@
 
 [![Build status](https://travis-ci.org/carldata/script-engine.svg?branch=master)](https://travis-ci.org/carldata/script-engine)
 
-Script Engine based on [FlowScript](https://travis-ci.org/carldata/flow-script).
+Script Engine based on the [FlowScript](http://github.com/carldata/flow-script).
 
 Provides REST API for executing scripts
  
