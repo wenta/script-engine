@@ -25,6 +25,15 @@ This should return (Check script 'scripts/Test1.fs' for the details):
 {result: 23}
 ```
 
+## Installing flow-script dependencies
+
+Since FlowScript is not yet published to the external repository, it is necessary to publish flow-script project 
+to the local repository with the command (do it inside the flow-script project)
+ 
+```bash
+sbt publish-local
+```
+
 # Join in!
 
 We are happy to receive bug reports, fixes, documentation enhancements,
