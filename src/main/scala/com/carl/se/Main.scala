@@ -16,9 +16,9 @@ object Main {
     implicit val executionContext = system.dispatcher
 
     val route =
-      path("hello") {
-        get {
-          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Say hello to akka-http</h1>\n"))
+      path("api" / "execute") {
+        post {
+          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "{result: 23}\n"))
         }
       }
 

@@ -11,6 +11,18 @@ Provides REST API for executing scripts
  ```bash
  sbt run
  ```
+ 
+Example function execution:
+
+```bash
+curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","x":23}' http://localhost:8080/api/execute
+```
+
+This should return (Check script 'scripts/Test1.fs' for the details):
+
+```bash
+{result: 23}
+```
 
 # Join in!
 
