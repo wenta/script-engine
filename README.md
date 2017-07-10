@@ -6,16 +6,17 @@ Script Engine based on the [FlowScript](http://github.com/carldata/flow-script).
 
 Provides REST API for executing scripts
  
-## Running server
+## Running the server
  
  ```bash
- sbt run
+$ sbt assembly
+$ java -jar target/scala-2.12/script-engine-assembly-0.1.0.jar 
  ```
  
-Example function execution:
+In separate terminal execute function:
 
 ```bash
-curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","x":23}' http://localhost:8080/api/execute
+$ curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","x":23}' http://localhost:8080/api/execute
 ```
 
 This should return (Check script 'scripts/Test1.fs' for the details):
