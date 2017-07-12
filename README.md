@@ -10,6 +10,7 @@ Provides REST API for executing scripts
 sbt assembly
 java -jar target/scala-2.12/script-engine-assembly-0.1.0.jar 
 docker build -t script-engine:0.1.0 .
+docker run -p 8080:8080 script-engine:0.1.0
  ```
  
 In separate terminal execute function:
