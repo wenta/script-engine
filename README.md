@@ -1,7 +1,5 @@
 # ScriptEngine
 
-[![Build status](https://travis-ci.org/carldata/script-engine.svg?branch=master)](https://travis-ci.org/carldata/script-engine)
-
 Script Engine based on the [FlowScript](http://github.com/carldata/flow-script).
 
 Provides REST API for executing scripts
@@ -9,14 +7,15 @@ Provides REST API for executing scripts
 ## Running the server
  
  ```bash
-$ sbt assembly
-$ java -jar target/scala-2.12/script-engine-assembly-0.1.0.jar 
+sbt assembly
+java -jar target/scala-2.12/script-engine-assembly-0.1.0.jar 
+docker build -t script-engine:0.1.0 .
  ```
  
 In separate terminal execute function:
 
 ```bash
-$ curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","x":23}' http://localhost:8080/api/execute
+curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","x":23}' http://localhost:8080/api/execute
 ```
 
 This should return (Check script 'scripts/Test1.fs' for the details):
