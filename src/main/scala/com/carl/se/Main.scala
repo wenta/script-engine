@@ -14,6 +14,9 @@ object Main {
     implicit val materializer = ActorMaterializer()
     // needed for the future flatMap/onComplete in the end
     implicit val executionContext = system.dispatcher
+    var sl = ScriptLoader
+    val scripts = sl.load()
+    scripts.foreach(println)
 
     val route =
       path("api" / "execute") {
