@@ -6,13 +6,14 @@ import com.carl.sf.compiler.AST.Module
 import scala.io.Source
 
 object ScriptLoader {
-
-  def load(): Seq[Module] = {
+  def load(): Map[String, Module] = {
     val dir = new File("scripts")
     dir.listFiles
       .filter(x => x.isFile && x.getName.endsWith(".fs"))
       .map(convert)
       .flatMap(compile)
+      .map(x => x.name -> x)
+      .toMap
   }
 
   def convert(f: File): String = {
