@@ -17,9 +17,6 @@ object Main {
     // needed for the future flatMap/onComplete in the end
     implicit val executionContext = system.dispatcher
 
-
-    hashMap.foreach(println)
-
     val route =
       path("api" / "execute") {
         post {
