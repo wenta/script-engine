@@ -16,7 +16,7 @@ docker run -p 8080:8080 script-engine:0.1.0
 In separate terminal execute function:
 
 ```bash
-curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","x":23}' http://localhost:8080/api/execute
+curl -H "Content-Type: application/json" -X POST -d '{"function":"Test1.main","params":[23]}' http://localhost:8080/api/execute
 ```
 
 This should return (Check script 'scripts/Test1.fs' for the details):
